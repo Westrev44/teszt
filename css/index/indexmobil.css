@@ -1,0 +1,167 @@
+
+@media screen and (max-width: 430px) {
+
+    
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 430px; /* Az oldal fix szélessége */
+        overflow-x: hidden; /* Megakadályozza a vízszintes görgetést */
+        background-color: var(--main);
+    }
+
+    body {
+        position: relative;
+        overflow-x: hidden; /* További biztonság */
+    }
+
+    .page-wrapper {
+        max-width: 430px; /* A wrapper ne legyen szélesebb, mint 430px */
+        width: 100%; /* Mindig kitöltse a 430px-t */
+        overflow-x: hidden; /* A wrapperen belüli túlcsordulás elrejtése */
+        margin: 0 auto; /* A wrapper középre igazítása */
+        padding: 10px;
+    }
+
+    * {
+        box-sizing: border-box; /* Minden elemre alkalmazzuk */
+    }
+
+    .container {
+        width: 100%; /* A container ne nyúljon túl */
+        max-width: 430px; /* A container szélessége soha ne haladja meg a 430px-t */
+        margin: 0 auto; /* A container középre igazítása */
+        overflow-x: hidden; /* Eltüntetni a vízszintes görgetést */
+    }
+
+    .logo-circle, .circle, .index1 img, .banner img {
+        max-width: 100%; /* A képek ne nyúljanak túl a szélességen */
+        height: auto;
+    }
+
+    
+
+    /* Képek és egyéb elemek szélességének korlátozása */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    
+
+    .promo{
+        text-align: center;
+        justify-content: center;
+    }
+    
+
+
+ 
+    .logo-line{
+        opacity: 0;
+    }
+
+    
+
+    .title {
+        font-size: 7vw;
+        top: 0;
+        padding: 1rem 0;
+        white-space: normal; /* Több soros címekhez */
+    }
+
+    #logo {
+        flex-direction: column;
+        top: auto;
+        left: auto;
+        transform: none;
+    }
+
+    .logo-circle {
+        height: 200px;
+        width: 200px;
+    }
+
+    .circle {
+        height: 150px;
+        width: 150px;
+        transform: translate(0, -150%);
+    }
+
+    .trailer {
+        height: auto; /* A magasság igazodik a tartalomhoz */
+        transform: none;
+        margin-bottom: 0;
+        display: none;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .col-2, .homeszoveg, .csapatunk {
+        flex: 0 0 100%;
+        max-width: 100%;
+        font-size: 1rem; /* Kisebb betűméret */
+    }
+
+    .banner img {
+        width: 100%;
+        height: auto;
+    }
+    .card-footer i{
+        text-align: center;
+    }
+
+
+    #jatekgomb, #jatekgomb1 {
+        width: 100%;
+        font-size: 1rem; /* Gombok kisebb betűmérete */
+    }
+    
+
+    .card2 {
+        margin-top: 3rem;
+        margin-bottom: 15px;
+        padding: 1.5rem;
+        background-color:var(--main);
+        
+    }
+
+
+    h2 {
+        font-size: 2rem; /* Címsor kisebb méretű mobilon */
+    }
+    
+    #jatekgomb{
+        max-width: 100px;
+        transform: translate(-29%,-100%);
+    }
+    .let{
+        transform: translate(-9%,-10%);
+    }
+
+    .index1 img{
+    width: 360px;
+    }
+    .col-2 img{
+        width: 360px;
+    }
+
+    #fo{
+        max-width: 430px;
+    }
+    .container{
+        padding: 2rem;
+
+    }
+    
+
+}
+
+@media screen and (max-width: 500px) {
+    #trailer {
+        display: none;
+    }
+}

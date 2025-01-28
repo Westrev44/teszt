@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrath Hound</title>
+    <link rel="shortcut icon" href="./img/permanent-pics/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/forgottenpsw.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Goblin+One&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="shortcut icon" href="./img/facivon.jpg" type="image/x-icon">
+</head>
+
+<body>
+        <!-- Sötét/Világos mód kapcsoló -->
+        <input type="checkbox" id="lightMode">
+
+        <!-- Hamburger menü -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    
+        <div class="page-wrapper">
+            <nav>
+                <div class="container">
+                    <div class="navbar-content">
+                        <!-- Navigációs menü -->
+                        <div class="main-menu">
+                            <button class="home" id="home">Főoldal</button>
+                            <button class="forum" id="forum">Fórum</button>
+                            <button class="csatlakozz" id="csatlakozz">Csatlakozz</button>
+                            <button type="button" id="jatekgomb1">Letöltés</button>
+                        </div>
+    
+                        <!-- Elválasztó vonal -->
+                        <div class="line"></div>
+    
+                        <!-- Sötét/Világos mód ikon -->
+                        <div id="light">
+                            <label for="lightMode"></label>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+
+        <div class="title">Wrath Hound</div>
+        
+        <div class="row">
+            <div class="col-2 index1">
+                <div class="psw_tarolo">  
+                    <p>Add meg új jelszavadat.</p>
+                    <div class="input">
+                        <input type="password" id="psw" placeholder="******">
+                    </div>
+                    <p>Erősítsd megúj jelszavat.</p>
+                    <div class="input">
+                       
+                        <input type="password" id="psw2" placeholder="******">
+                    </div>
+                    <button type="button" id="reggomb">Új jelszó</button>                   
+                </div>
+            </div>
+            <div class="col-2 index1">
+                <div class="let">
+                    <div class="logo-circle"><img src="./img/permanent-pics/logo.jpg" alt=""></div>
+                    <div class="circle"></div>
+                    <div id="logo"></div>
+
+                </div>
+            </div>
+</div>
+    <script src="./js/forhottenpsw.js"></script>
+</body>
+
+</html>

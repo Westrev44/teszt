@@ -1,0 +1,321 @@
+:root {
+    --main: #0F3B52;
+    --main-text: #C2FFCA;
+    --secondary: #453A43;
+    --secondary-text: #F7F8CA;
+    --button-red: #C33835;
+}
+
+#lightMode:checked ~ * {
+    --main: #C2FFCA;
+    --main-text: #0F3B52;
+    --secondary: #F7F8CA;
+    --secondary-text: #453A43;
+}
+
+.page-wrapper {
+    background-color: var(--main);
+    z-index: -10;
+}
+
+body {
+    height: 100vh;
+}
+
+
+* {
+    background-color: var(--main);
+    color: var(--secondary-text);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+.container {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+
+#logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.logo-circle {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    display: flex;
+    background-color: var(--secondary);
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    left: 50%;
+    transform: translate(-50%, 5%);
+}
+
+.logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    opacity: 28%;
+}
+.title {
+    font-size: 5vw;
+    z-index: 100;
+    text-align: center;
+    position: relative;
+    background-color: transparent;
+    color: var(--main-text);
+    font-family: "Goblin One", serif;
+    top: -5%;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.circle {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    display: flex;
+    background-color: var(--button-red);
+    position: relative;
+    z-index: 2;
+    left: 51%;
+    transform: translate(5%, -180%);
+}
+
+.logo-line {
+    border: solid var(--secondary) 8px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    transform: translate(0, -2860%);   
+}
+.trailer{
+    width: 100%;
+    height: 130vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    position: relative;
+    transform: translate(0, -39%);
+    margin-bottom: -400px;
+}
+.trailer video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
+    margin-bottom: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.col-2{
+    flex: 0 0 48%;
+    max-width: 48%;
+    text-align: justify;
+    font-size: 1.5vw;
+    align-items: center;
+    justify-content: center;
+}
+.col-2 img{
+    width: 600px;
+}
+
+
+/*Áron álltal írt*/
+.homeszoveg{
+    flex: 0 0 48%;
+    text-align: justify;
+    font-size: 1.5vw;
+    align-items: center;
+    justify-content: center; 
+}
+/*Áron álltal írt*/
+.csapatunk{
+    flex: 0 0 48%;
+    margin-top: 5rem;
+    text-align: justify;
+    font-size: 1.5vw;
+    align-items: center;
+    justify-content: center;
+}
+html{
+    background-color: var(--main);
+}
+
+
+
+h2{
+    font-size: 3vw;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.banner{
+margin-top: 5rem;
+margin-bottom: 5rem;
+}
+
+#jatekgomb {
+    font-size: 1.5rem;
+    color: white;
+    background-color: #C33835;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 15px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(20%);
+
+}
+#jatekgomb1 {
+    color: white;
+    background-color: #C33835;
+    border-radius: 10px;
+    width: 150px;
+    padding: 9px;
+}
+
+
+
+.let {
+    margin-top: 20px;
+    border-radius: 10%;
+    padding: 15px;
+    width: 500px;
+    min-width: 90%;
+    margin: 50px 0 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner {
+    width: 100%; 
+    height: auto; /* A magasság igazodik a tartalomhoz */
+    overflow: hidden; /* Ha szükséges, elrejti a túlcsordulást */
+}
+
+.banner img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+.index1 img{
+    width: 600px;   
+}
+
+.card2 {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: inherit;
+    padding: 2rem;
+}
+
+.card2-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.card2-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover; 
+}
+.promo{
+    text-align: center;
+}
+
+#logoutbtn, #logoutbtn a{
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #C33835;
+    border: none;
+    cursor: pointer;
+    border-radius: 40%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto; /* Ez a gombot a jobb oldalra igazítja */
+}
+
+.icon-logout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    
+    
+}
+
+.icon-logout i{
+    color: white;
+    opacity: 100%;
+}
+.fa-arrow-right-from-bracket{
+    background-color: inherit;
+}
+
+
+#fo{
+    min-height: 100vh; /* Az egész képernyő magasságát kitölti */
+    height: auto; /* A tartalomhoz igazodik */
+}
+
+
+
+
+
+
+
+
+
