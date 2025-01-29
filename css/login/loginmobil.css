@@ -110,6 +110,30 @@
         margin-top: 5rem;
         z-index: -1;
     }
+    .bejelentkezes_tarolo{
+       
+        height: 400px;
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 3rem;
+        color: black;
+        font-weight: 500;
+        border-radius: 20px;
+        transform: translate(5%, -25%);
+    }
+    input {
+        border: none;
+        font-size: 1.5rem;
+        padding: 10px 0;
+        width: 320px;
+        outline: none;
+    }
+    .input{
+        width: 370px;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -166,6 +190,8 @@
         top: 0;
         padding: 1rem 0;
         white-space: normal; /* Több soros címekhez */
+        transform: translate(1%,-120%);
+        margin-top: 14rem;
     }
 
     #logo {
@@ -194,13 +220,13 @@
     }
 
     .row {
+        margin-top: 5rem;
         flex-direction: row;
         gap: 20px;
     }
 
     .col-2{
         margin-top: -10rem;
-
         max-width: 100%;
         font-size: 1rem; /* Kisebb betűméret */
     }
@@ -219,14 +245,41 @@
   
     #fo{
         max-width: 932px;
+        height: 100vh;
     }
     .container{
         padding: 2rem;
 
     }
     .oldaltartalom{
-        margin-top: 5rem;
+        margin-top: 10rem;
     }
+
+    .bejelentkezes_tarolo{
+       
+        height: 400px;
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 3rem;
+        color: black;
+        font-weight: 500;
+        border-radius: 20px;
+        transform: translate(5%, -25%);
+    }
+    input {
+        border: none;
+        font-size: 1.5rem;
+        padding: 10px 0;
+        width: 320px;
+        outline: none;
+    }
+    .input{
+        width: 370px;
+    }
+
 
 
 }

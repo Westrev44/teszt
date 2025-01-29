@@ -14,9 +14,11 @@
 }
 
 .page-wrapper {
-    height: 100%;
     background-color: var(--main);
     z-index: -10;
+}
+body {
+    height: 100vh;
 }
 
 * {
@@ -27,59 +29,11 @@
     margin: 0;
     box-sizing: border-box;
 }
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 5rem;
-    padding-bottom: 1rem;
-    width: 100%;
+html{
+    background-color: var(--main);
 }
 
-.navbar-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-}
 
-a {
-    display: flex;
-    opacity: 70%;
-    text-decoration: none;
-    text-decoration: underline;
-}
-
-.second-menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 10rem;
-}
-
-.main-menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 18rem;/*levettem 18remre*/
-    opacity: 100%;
-    overflow: hidden;
-}
-
-.main-menu button {
-    border: none;
-    font-size: 1.4rem;
-    cursor: pointer;
-    background-color: transparent;
-}
-
-.line {
-    border: solid 1px var(--secondary-text);
-    width: 100%;
-    margin: 10px 0 10px 0;
-}
 
 .container {
     width: 100%;
@@ -88,23 +42,7 @@ a {
     position: relative;
 }
 
-#light label {
-    background-color: var(--main-text);
-    height: 20px;
-    width: 20px;
-    position: absolute;
-    display: flex;
-    top: 17%;
-    right: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    border-radius: 50%;
-    align-items: center;
-}
 
-#lightMode {
-    display: none;
-}
 
 #logo {
     position: absolute;
@@ -180,10 +118,10 @@ a {
 
 
 .row{
-    margin-top: 50px;
     display: flex;
     justify-content: space-evenly;
     gap: 50px;
+    margin-bottom: 50px;
     align-items: center;
     justify-content: center;
 }
@@ -219,7 +157,6 @@ h2{
     justify-content: center;
     align-items: center;
 }
-
 #jatekgomb1 {
     color: white;
     background-color: #C33835;
@@ -228,9 +165,9 @@ h2{
     padding: 9px;
 }
 
-.psw_tarolo{
+.reg_tarolo{
     background-color:var(--secondary);
-    height: 400px;
+    height: 560px;
     width: 600px;
     display: flex;
     justify-content: center;
@@ -242,9 +179,12 @@ h2{
     border-radius: 20px;
     transform: translate(50%, -25%);
 }
-.psw_tarolo p{
+.reg_tarolo a{
+    margin-top: 20px;
+    color: var(--main-text);
+    font-size: small;
     background-color: inherit;
-    font-size: medium;
+    
 }
 
 .input {
@@ -264,78 +204,11 @@ input {
     width: 460px;
     outline: none;
 }
-
-
-.hamburger-menu {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    width: 30px;
-    height: 25px;
-}
-
-.hamburger-menu span {
-    display: block;
-    height: 4px;
-    background-color: var(--main-text);
-    border-radius: 2px;
-    width: 100%;
-    transition: 0.3s ease;
-}
-
-.menu-toggle {
-    display: none;
-}
-
-.menu-toggle:checked ~ nav {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    left: 0;
+#fo{
+    min-height: 100vh; /* Az egész képernyő magasságát kitölti */
+    height: auto; /* A tartalomhoz igazodik */
     background-color: var(--main);
-    width: 100%;
-    padding: 1rem 0;
-    z-index: 100;
-    gap: 1rem;
 }
 
-/* Mobil nézet */
-@media screen and (max-width: 768px) {
-    nav {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
 
-    .hamburger-menu {
-        display: flex;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        z-index: 101;
-    }
-
-    .main-menu {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    .main-menu button {
-        font-size: 1.2rem;
-        padding: 10px 20px;
-        width: auto;
-        text-align: center;
-        background-color: transparent;
-        color: var(--secondary-text);
-        border: none;
-        cursor: pointer;
-    }
-
-    .main-menu button:hover {
-        color: var(--main-text);
-    }
-}
 

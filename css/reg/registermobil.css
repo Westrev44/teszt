@@ -1,6 +1,4 @@
 @media screen and (max-width: 430px) {
-
-
     html, body {
         margin: 0;
         padding: 0;
@@ -8,12 +6,10 @@
         overflow-x: hidden; /* Megakadályozza a vízszintes görgetést */
         background-color: var(--main);
     }
-
     body {
         position: relative;
         overflow-x: hidden; /* További biztonság */
     }
-
     .page-wrapper {
         max-width: 430px; /* A wrapper ne legyen szélesebb, mint 430px */
         width: 100%; /* Mindig kitöltse a 430px-t */
@@ -21,11 +17,9 @@
         margin: 0 auto; /* A wrapper középre igazítása */
         padding: 10px;
     }
-
     * {
         box-sizing: border-box; /* Minden elemre alkalmazzuk */
     }
-
     .container {
         width: 100%; /* A container ne nyúljon túl */
         max-width: 430px; /* A container szélessége soha ne haladja meg a 430px-t */
@@ -33,19 +27,88 @@
         overflow-x: hidden; /* Eltüntetni a vízszintes görgetést */
         
     }
-
     .logo-circle, .circle, .index1 img, .banner img {
         max-width: 100%; /* A képek ne nyúljanak túl a szélességen */
         height: auto;
     }
+
+
+
+    #logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    
+}
+
+.logo-circle {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    display: flex;
+    background-color: var(--secondary);
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    left: 50%;
+    transform: translate(-50%, 5%);
+}
+
+.logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    opacity: 28%;
+}
+.title {
+    font-size: 4vw;
+    z-index: 100;
+    text-align: center;
+    position: relative;
+    background-color: transparent;
+    color: var(--main-text);
+    font-family: "Goblin One", serif;
+    top: -5%;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 7rem;
+}
+.circle {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    display: flex;
+    background-color: var(--button-red);
+    position: relative;
+    z-index: 2;
+    left: 51%;
+    transform: translate(5%, -180%);
+}
+
+.logo-line {
+    border: solid var(--secondary) 8px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    transform: translate(0, -2860%);   
+}
+
     
     /* Képek és egyéb elemek szélességének korlátozása */
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-
+   
     .title {
         font-size: 7vw;
         top: 0;
@@ -53,12 +116,7 @@
         white-space: normal; /* Több soros címekhez */
     }
 
-    #logo {
-        flex-direction: column;
-        top: auto;
-        left: auto;
-        transform: none;
-    }
+
 
     .logo-circle {
         height: 200px;
@@ -110,14 +168,36 @@
         margin-top: 5rem;
         z-index: -1;
     }
+    .reg_tarolo{
+       
+        height: 500px;
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 3rem;
+        color: black;
+        font-weight: 500;
+        border-radius: 20px;
+        transform: translate(5%, -25%);
+    }
+    input {
+        border: none;
+        font-size: 1.5rem;
+        padding: 10px 0;
+        width: 320px;
+        outline: none;
+    }
+    .input{
+        width: 370px;
+    }
 }
-
 @media screen and (max-width: 500px) {
     #trailer {
         display: none;
     }
 }
-
 @media screen and (max-width: 932px) and (min-width:431px){
 
     
@@ -144,11 +224,17 @@
         margin: 0 auto; /* A container középre igazítása */
         overflow-x: hidden; /* Eltüntetni a vízszintes görgetést */
     }
-
-    .logo-circle, .circle, .index1 img, .banner img {
-        max-width: 100%; /* A képek ne nyúljanak túl a szélességen */
-        height: auto;
+    .title {
+        font-size: 7vw;
+        top: 0;
+        padding: 1rem 0;
+        white-space: normal; /* Több soros címekhez */
+        transform: translate(1%,-120%);
+        margin-top: 14rem;
+        margin-bottom: 10rem;
     }
+
+
 
 
     /* Képek és egyéb elemek szélességének korlátozása */
@@ -156,25 +242,7 @@
         max-width: 100%;
         height: auto;
     }
-
-    .logo-line{
-        opacity: 0;
-    }
-   
-    .title {
-        font-size: 7vw;
-        top: 0;
-        padding: 1rem 0;
-        white-space: normal; /* Több soros címekhez */
-    }
-
-    #logo {
-        flex-direction: column;
-        top: auto;
-        left: auto;
-        transform: none;
-    }
-
+ 
     .logo-circle {
         height: 200px;
         width: 200px;
@@ -194,13 +262,13 @@
     }
 
     .row {
+        margin-top: 5rem;
         flex-direction: row;
         gap: 20px;
     }
 
     .col-2{
         margin-top: -10rem;
-
         max-width: 100%;
         font-size: 1rem; /* Kisebb betűméret */
     }
@@ -219,14 +287,44 @@
   
     #fo{
         max-width: 932px;
+        height: 100vh;
     }
     .container{
         padding: 2rem;
 
     }
     .oldaltartalom{
-        margin-top: 5rem;
+        margin-top: 10rem;
     }
+
+    .reg_tarolo{
+       
+        height: 500px;
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 3rem;
+        color: black;
+        font-weight: 500;
+        border-radius: 20px;
+        transform: translate(5%, -25%);
+    }
+    input {
+        border: none;
+        font-size: 1.5rem;
+        padding: 10px 0;
+        width: 320px;
+        outline: none;
+    }
+    .input{
+        width: 370px;
+    }
+    .let{
+        transform: translate(-5%,-30%);
+    }
+
 
 
 }

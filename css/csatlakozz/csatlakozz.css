@@ -14,7 +14,7 @@
 }
 
 .page-wrapper {
-    height:100vh;
+
     background-color: var(--main);
     z-index: -10;
 }
@@ -161,7 +161,6 @@ h2{
     padding: 15px;
     width: 500px;
     min-width: 90%;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -172,5 +171,4 @@ h2{
     height: auto; /* A tartalomhoz igazodik */
     background-color: var(--main);
 }
-
 
