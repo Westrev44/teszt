@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wrath Hound</title>
     <link rel="shortcut icon" href="./img/permanent-pics/logo.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="./css/forum/forum.css">
+    <link rel="stylesheet" href="./css/profile/profile.css">
+    <link rel="stylesheet" href="./css/profile/profilemobil.css">
     <link rel="stylesheet" href="./css/index/indexnav.css">
+    <link rel="stylesheet" href="./css/index/indexcard.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Goblin+One&display=swap" rel="stylesheet">
@@ -55,11 +57,56 @@
             </nav>
 
             <div class="oldaltartalom">
+                <div class="card2">
+                    <div class="card2-header">
+                        <a href="profile.html">
+                            <img src="./img/profile.jpg" alt="profile">
+                        </a>
+                        User
+                        <button type="button" id="logoutbtn">
+                            <a href="#" class="icon-logout">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            </a>
+                        </button>
+                    </div>
+                </div>
 
-                <div class="title">Wrath Hound</div>
-                <div class="logo-circle"><img src="./img/permanent-pics/logo.jpg" alt=""></div>
-                <div class="circle"></div>
-                <div id="logo"></div>
+               
+
+
+
+
+                <div class="felhasznalo">
+                    <div class="col-2 baratok">
+                        <div class="baratok_tarolo">
+                            <h2>Barátok</h2>
+                        </div>
+                    </div>
+                
+                    <div class="col-2 felhasznalo_adatok">
+                        <div class="adatok_tarolo">
+                            <h2>Felhasználó adatai</h2>
+                            <p>Felhasználónév:</p>
+                            <p>Email:</p>
+                            <p>Jelszó:</p>
+                        </div>
+                    </div>
+                
+                    <div class="col-2 valtogombok">
+                        <button type="button" class="Changegbtn" id="userMgomb">Név módosítása</button>
+                        <button type="button" class="Changegbtn" id="emailMgomb">E-mail módosítása</button>
+                        <button type="button" class="Changegbtn" id="pswMgomb">Jelszó módosítása</button>
+                    </div>
+                </div>
+                
+
+
+                        <div class="achivementek">
+                            <h2>Achívmentek</h2>
+                            
+
+                        </div>
+                    </div>
 
 
 
@@ -68,7 +115,7 @@
     </div>
 </div>
 
-    <script src="./js/forum.js"></script>
+    <script src="./js/profile.js"></script>
 </body>
 
 </html>

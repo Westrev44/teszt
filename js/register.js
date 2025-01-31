@@ -5,7 +5,7 @@ async function register() {
     const psw2 = document.getElementById('psw2').value;
 
 
-    const res = await fetch('http://192.168.10.18:6500/api/auth/registration', {
+    const res = await fetch('http://127.0.0.1:6500/api/auth/registration', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'

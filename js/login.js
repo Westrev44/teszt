@@ -2,7 +2,7 @@ async function login() {
     const email = document.getElementById('email').value;
     const psw = document.getElementById('psw').value;
 
-    const res = await fetch('http://192.168.10.18:6500/api/auth/login', {
+    const res = await fetch('http://127.0.0.1:6500/api/auth/login', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'

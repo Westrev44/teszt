@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', checkUserLoggedIn);
 let logged = false;
 async function checkUserLoggedIn() {
 
-        const res = await fetch('http://192.168.10.18:6500/api/auth/validate', {
+        const res = await fetch('http://127.0.0.1:6500/api/auth/validate', {
             method: 'GET', 
             credentials: 'include'
         });
@@ -27,7 +27,7 @@ async function checkUserLoggedIn() {
 
 
 async function getPosts() {
-    const res = await fetch('http://192.168.10.18:6500/api/forum/allposts', {
+    const res = await fetch('https://nodejs310.dszcbaross.edu.hu/api/forum/allposts', {
         method: 'GET',
         credentials: 'include'
     });
