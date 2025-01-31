@@ -35,7 +35,7 @@ forum?.addEventListener('click', () => {
 
 
 btnLogin.addEventListener('click', () => {
-    window.location.href = '../login.html';
+    window.location.href = 'https://westrev44.github.io/teszt/login.html';
 });
 
 btnReg.addEventListener('click', () => {
