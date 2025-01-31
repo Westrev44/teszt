@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const csatlakozz = document.querySelector('.csatlakozz');
     const forum = document.querySelector('.forum');
     const home = document.querySelector('.home');
-    
+    const iconLogout = document.getElementsByClassName('icon-logout')[0];
     // Az fo id-jú div szélessége mindig akkora, mint az ablak szélessége
     const fo = document.getElementById('fo');
     if (fo) {
@@ -17,6 +17,33 @@ document.addEventListener('DOMContentLoaded', () => {
         // Az ablakméret változására frissítjük az #fo szélességét
         window.addEventListener('resize', updateFoWidth);
     }
+
+
+
+
+    iconLogout.addEventListener('click', logout);
+
+    async function logout(upload_id){
+        console.log(upload_id);
+        const res = await fetch(`http://192.168.10.18:6500/api/auth/logout`, {
+            method: 'POST',
+            credentials: 'include'
+        });
+    
+        const data = await res.json();
+        
+        if(res.ok){
+            alert(data.message);
+            window.location.href='../index.html';
+        }else{
+            alert('Hiba a kijelentkezéskor');
+       
+        }
+    
+    }
+
+
+
 
     // Gombok funkcióinak hozzáadása
     csatlakozz?.addEventListener('click', () => {

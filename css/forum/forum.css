@@ -54,11 +54,12 @@ body {
     justify-content: center;
     flex-direction: column;
     width: 100%;
+    
 }
 
 .logo-circle {
-    height: 400px;
-    width: 400px;
+    height: 220px;
+    width: 220px;
     border-radius: 50%;
     display: flex;
     background-color: var(--secondary);
@@ -67,7 +68,7 @@ body {
     justify-content: center;
     z-index: 5;
     left: 50%;
-    transform: translate(-50%, 5%);
+    transform: translate(-45%, -60%);
 }
 
 .logo-circle img {
@@ -95,8 +96,8 @@ body {
     overflow: hidden;
 }
 .circle {
-    height: 250px;
-    width: 250px;
+    height: 130px;
+    width: 130px;
     border-radius: 50%;
     display: flex;
     background-color: var(--button-red);
@@ -106,33 +107,9 @@ body {
     transform: translate(5%, -180%);
 }
 
-.logo-line {
-    border: solid var(--secondary) 8px;
-    width: 100%;
-    position: relative;
-    z-index: 2;
-    transform: translate(0, -2860%);   
-}
-.trailer{
-    width: 100%;
-    height: 130vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
-    position: relative;
-    transform: translate(0, -39%);
-    margin-bottom: -400px;
-}
-.trailer video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-}
+
+
+
 .row{
     display: flex;
     justify-content: space-evenly;
@@ -155,24 +132,6 @@ body {
     width: 600px;
 }
 
-
-/*Áron álltal írt*/
-.homeszoveg{
-    flex: 0 0 48%;
-    text-align: justify;
-    font-size: 1.5vw;
-    align-items: center;
-    justify-content: center; 
-}
-/*Áron álltal írt*/
-.csapatunk{
-    flex: 0 0 48%;
-    margin-top: 5rem;
-    text-align: justify;
-    font-size: 1.5vw;
-    align-items: center;
-    justify-content: center;
-}
 html{
     background-color: var(--main);
 }
@@ -185,26 +144,9 @@ h2{
     margin-bottom: 50px;
 }
 
-.banner{
-margin-top: 5rem;
-margin-bottom: 5rem;
-}
 
-#jatekgomb {
-    font-size: 1.5rem;
-    color: white;
-    background-color: #C33835;
-    border: none;
-    cursor: pointer;
-    border-radius: 10px;
-    padding: 15px;
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translate(20%);
 
-}
+
 #jatekgomb1 {
     color: white;
     background-color: #C33835;
@@ -227,32 +169,32 @@ margin-bottom: 5rem;
     align-items: center;
 }
 
-.banner {
-    width: 100%; 
-    height: auto; /* A magasság igazodik a tartalomhoz */
-    overflow: hidden; /* Ha szükséges, elrejti a túlcsordulást */
-}
-
-.banner img {
-    width: 100%; 
-    height: auto; 
-    display: block; 
-}
-
-.index1 img{
-    width: 600px;   
-}
-
-
-.promo{
-    text-align: center;
-}
 
 #fo{
     min-height: 100vh; /* Az egész képernyő magasságát kitölti */
     height: auto; /* A tartalomhoz igazodik */
 }
 
+.search-container {
+    margin-bottom: 20px;
+}
+
+.search-container input {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
 
 
 

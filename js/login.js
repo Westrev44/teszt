@@ -1,79 +1,86 @@
+async function login() {
+    const email = document.getElementById('email').value;
+    const psw = document.getElementById('psw').value;
+
+    const res = await fetch('http://192.168.10.18:6500/api/auth/login', {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify({ email, psw }),
+        credentials: 'include'
+    });
+
+    const data = await res.json();
+
+    if (res.ok) {
+        resetInputs();
+        alert(data.message);
+        window.location.href = '../index.html';
+    } else if (data.errors) {
+        let errorMessage = '';
+        data.errors.forEach(error => {
+            errorMessage += `${error.error}\n`;
+        });
+        alert(errorMessage);
+    } else if (data.error) {
+        alert(data.error);
+    } else {
+        alert('Ismeretlen hiba');
+    }
+}
+
+function resetInputs() {
+    document.getElementById('email').value = '';
+    document.getElementById('psw').value = '';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    const btnLogin = document.getElementsByClassName('login')[0];
+    const btnLogin = document.querySelector('.login');
     const csatlakozz = document.querySelector('.csatlakozz');
     const forum = document.querySelector('.forum');
     const home = document.querySelector('.home');
-    
-    // Az fo id-jú div szélessége mindig akkora, mint az ablak szélessége
     const fo = document.getElementById('fo');
+    const hamburgerIcon = document.querySelector('.hamburger-menu');
+    const navMenu = document.querySelector('nav');
+    const lightLabel = document.querySelector('#light label');
+
     if (fo) {
         const updateFoWidth = () => {
             fo.style.width = `${window.innerWidth}px`;
         };
-    
-        // Kezdeti szélesség beállítása
         updateFoWidth();
-    
-        // Az ablakméret változására frissítjük az #fo szélességét
         window.addEventListener('resize', updateFoWidth);
     }
-    
-    // Gombok funkcióinak hozzáadása
+
     csatlakozz?.addEventListener('click', () => {
         window.location.href = '../csatlakozz.html';
     });
-    
     home?.addEventListener('click', () => {
         window.location.href = '../index.html';
     });
-    
     forum?.addEventListener('click', () => {
         window.location.href = '../forum.html';
     });
-    
-    
-    btnLogin.addEventListener('click', () => {
-        window.location.href = '../index.html';
-    });
-    
-   
-    
-        // Hamburger menü ikon és a navigáció
-        const hamburgerIcon = document.querySelector('.hamburger-menu');
-        const navMenu = document.querySelector('nav');
-    
-        if (hamburgerIcon && navMenu) {
-            // Kattintás esemény a hamburger menü ikonra
-            hamburgerIcon.addEventListener('click', () => {
-                // Menü megjelenítése vagy elrejtése
-                navMenu.classList.toggle('active');
-            });
+    btnLogin?.addEventListener('click', login);
+
+    if (hamburgerIcon && navMenu) {
+        hamburgerIcon.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    }
+
+    const setPosition = () => {
+        const windowWidth = window.innerWidth;
+        if (windowWidth <= 430) {
+            lightLabel.style.transform = 'translate(50%,-670%)';
+        } else if (windowWidth <= 932) {
+            lightLabel.style.transform = 'translate(50%,-250%)';
+        } else {
+            lightLabel.style.transform = '';
         }
-    
-        // Light mode gomb pozíciójának beállítása
-        const lightLabel = document.querySelector('#light label'); // A gomb kiválasztása
-    
-        const setPosition = () => {
-            const windowWidth = window.innerWidth; // Ablak szélessége
-    
-            // 430px alatti képernyőméret esetén
-            if (windowWidth <= 430) {
-                lightLabel.style.transform = 'translate(50%,-670%)'; // Kisméretű gomb pozíció
-            }
-            // 932px alatti képernyőméret esetén
-            else if (windowWidth <= 932) {
-                lightLabel.style.transform = 'translate(50%,-250%)'; // Kisebb mobil pozíció
-            }
-            // Nagyobb képernyőméretek (asztali nézet)
-            else {
-                lightLabel.style.transform = ''; // Eltávolítjuk a transformot asztali nézetben
-            }
-        };
-    
-        // Alapértelmezett pozíció beállítása betöltéskor
-        setPosition();
-    
-        // Ablakméret változásra reagálunk
-        window.addEventListener('resize', setPosition);
-    });
-    
+    };
+
+    setPosition();
+    window.addEventListener('resize', setPosition);
+});

@@ -61,3 +61,66 @@
     background-color: inherit;
     padding: 10px;
 }
+
+
+.card2 {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: inherit;
+    padding: 2rem;
+}
+.card2 a{
+    opacity: 100%;
+}
+
+.card2-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.card2-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover; 
+}
+
+#logoutbtn, #logoutbtn a{
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #C33835;
+    border: none;
+    cursor: pointer;
+    border-radius: 40%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto; /* Ez a gombot a jobb oldalra igazítja */
+}
+
+.icon-logout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    
+    
+}
+
+.icon-logout i{
+    color: white;
+    opacity: 100%;
+}
+.fa-arrow-right-from-bracket{
+    background-color: inherit;
+}
